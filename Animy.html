@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Animation</title>
+        <style>
+            body{
+                margin: 0;
+                background:skyblue ;
+                overflow: hidden;
+                height: 100vh;
+            }
+            .Water {
+                position: relative;
+                width: 100%;
+                height: 100%;
+            }
+            .ani{
+                bottom: 50px;
+                position: absolute;
+                left: -100%;
+                width: 100px;
+                height: 80px;
+                background: yellow;
+                border-radius: 50% 50% 40% 40%;
+                animation: swim 8s linear infinite;
+            }
+            .wing {
+                width: 30px;
+                height: 30px;
+                background: orange;
+                border-radius: 50%;
+                position: absolute;
+                top: 20px;
+                left: 35%;
+                animation: flap 0.5s infinite alternate;
+            }
+            .eye {
+                width: 10px;
+                height: 10px;
+                background: black;
+                border-radius:50% ;
+                position: absolute;
+                top: 10px;
+                left: 70px;
+            }
+            .shape{
+                width: 20px;
+                height: 10px;
+                background: orange;
+                position: absolute;
+                top: 30px;
+                right: -10px;
+                clip-path: polygon(0 0,100% 50%,0 100%);
+            }
+                @keyframes swim {
+                    0% {
+                        left:-100px;
+                    }
+                    100% {
+                        left: 988px;
+    }
+            }
+            @keyframes flap{
+            0%{
+                transform: rotate(0deg);
+            }
+            100% {
+                transform:rotate(20deg);
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="Water">
+        <div class="ani">
+        <div class="wing"></div>
+        <div class="eye"></div>
+        <div class="shape"></div>
+</div>
+        </div>
+    </body>
+</html>
